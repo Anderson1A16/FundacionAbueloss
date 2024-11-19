@@ -49,7 +49,7 @@ const updateSedes = async(req, res) =>{
 const deleteSedes = async(req, res) =>{
     try{
         await Sedes.delete(req.params.id);
-        res.json({message: 'Sede eliminada satisfactoriamente prueba git listo'});
+        res.json({message: 'Sede eliminada satisfactoriamente'});
         
     }
     catch(err){
