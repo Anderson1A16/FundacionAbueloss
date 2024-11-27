@@ -11,6 +11,7 @@ const Persona = require('./routes/persona');
 const Acudiente = require('./routes/acudiente');
 const Enfermero = require('./routes/enfermero');
 const Medicamento = require('./routes/medicamento');
+const Paciente = require('./routes/paciente');
 require('dotenv').config();
 
 const app = express();
@@ -27,6 +28,7 @@ app.use('/api/persona', Persona);
 app.use('/api/acudiente', Acudiente);
 app.use('/api/enfermero', Enfermero);
 app.use('/api/medicamento', Medicamento);
+app.use('/api/paciente', Paciente);
 
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, ()=> {

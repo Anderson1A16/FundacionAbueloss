@@ -5,7 +5,7 @@ const Medicamentos = {
         const[rows] = await db.query('select med_id, med_nombre, med_presentacion, med_observacion from sql10744906.Medicamento');
         return rows;
     },
-    getById:async(per_id) =>{
+    getById:async(med_id) =>{
         const [rows] = await db.query('select med_id, med_nombre, med_presentacion, med_observacion from sql10744906.Medicamento where med_id=?', [med_id]);
             return rows [0];
     },

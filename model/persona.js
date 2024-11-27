@@ -5,7 +5,7 @@ const Persona = {
         const[rows] = await db.query('select per_id, per_documento, per_nombres, per_correo, per_fecha_nacimiento, per_genero, per_telefono, rol_id from sql10744906.Persona');
         return rows;
     },
-    getById:async(su_id) =>{
+    getById:async(per_id) =>{
         const [rows] = await db.query('select per_id, per_documento, per_nombres, per_correo, per_fecha_nacimiento, per_genero, per_telefono, rol_id from sql10744906.Persona where per_id=?', [per_id]);
             return rows [0];
     },
